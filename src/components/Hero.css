@@ -55,10 +55,15 @@
     padding: 0.1rem 0.2rem;
     border-radius: 4px;
     padding-top: 1rem;
+    text-decoration: none;
     padding-bottom: 2rem;
     /* margin-left: 1rem;
     margin-right: 1rem; */
     font-weight: bold;
     font-size: 90%;
     width: 250px;
+}
+.link-decor {
+    text-decoration: none;
+    color: white;
 }

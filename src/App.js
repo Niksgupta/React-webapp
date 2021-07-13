@@ -6,6 +6,8 @@ import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 // import GetButton from "./components/GetButton"
 import {useAuth0} from "@auth0/auth0-react";
 import Hero from './components/Hero';
+import Colelctions from './components/Colelctions';
+import Main from './components/Main';
 
 
 function App() {
@@ -23,11 +25,19 @@ function App() {
      
       <Navbar />
      <Switch>
-       <Route path = "/" />
+       <Route exact path = "/" component={Main}/>
      </Switch>
-     <Hero />
+
+     <Switch>
+       <Route  path = "/Hero"  component={Hero} />
+     </Switch>
+     
      {/* <Home />
       <LogoutButton /> */}
+
+     <Switch>
+       <Route path = "/collections" component={Colelctions} />
+     </Switch>
 
     </Router>
   );
