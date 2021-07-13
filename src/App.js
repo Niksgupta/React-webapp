@@ -5,6 +5,7 @@ import LogoutButton from './components/Logout';
 import Home from './components/Home';
 // import GetButton from "./components/GetButton"
 import {useAuth0} from "@auth0/auth0-react";
+import Hero from './components/Hero';
 
 
 function App() {
@@ -24,9 +25,9 @@ function App() {
      <Switch>
        <Route path = "/" />
      </Switch>
-     
-     <Home />
-      <LogoutButton />
+     <Hero />
+     {/* <Home />
+      <LogoutButton /> */}
 
     </Router>
   );
