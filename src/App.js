@@ -6,9 +6,9 @@ import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 // import GetButton from "./components/GetButton"
 import {useAuth0} from "@auth0/auth0-react";
 import Hero from './components/Hero';
-import Colelctions from './components/Colelctions';
+import Colelctions from './components/Collections';
 import Main from './components/Main';
-
+import cart from "./components/Collections"
 
 function App() {
   const {isLoading} = useAuth0();
@@ -23,19 +23,15 @@ function App() {
   return (
     <Router>
      
-      <Navbar />
+      <Navbar cart= {cart} />
      <Switch>
        <Route exact path = "/" component={Main}/>
-     </Switch>
-
-     <Switch>
+     
        <Route  path = "/Hero"  component={Hero} />
-     </Switch>
      
      {/* <Home />
       <LogoutButton /> */}
 
-     <Switch>
        <Route path = "/collections" component={Colelctions} />
      </Switch>
 

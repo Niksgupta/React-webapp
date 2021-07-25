@@ -48,7 +48,7 @@
 .hero-button-text {
     text-align: center;
     font-size: 10px;
-    background-color : #1c2237;
+    background-color : #1c2237 !important;
     height: 20px;
     color: white;
     outline: none;

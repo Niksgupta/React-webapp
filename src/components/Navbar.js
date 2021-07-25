@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import GetButton from "./GetButton";
+import Logout from "./Logout";
 import './Navbar.css';
 import './Button.css';
 import { MdFingerprint } from 'react-icons/md';
@@ -9,7 +10,7 @@ import { IconContext } from 'react-icons/lib';
 
 
 
-function Navbar() {
+function Navbar({cart}) {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
@@ -52,9 +53,27 @@ function Navbar() {
                   Products
                 </Link>
               </li>
+{/* 
+              <li className='nav-item'>
+                <Link
+                  to='/products'
+                  className='nav-links'
+                  onClick={closeMobileMenu}
+                >
+                  <img src="https://celestialthings.netlify.app/static/media/shopping-cart.0b8fa688.svg" alt="cart" />
+                  <p>({cart.length})</p>
+                </Link>
+              </li> */}
+
+
               <li className='nav-btn'>
                 <GetButton />
               </li>
+
+              <li className='nav-btn'>
+                <Logout />
+              </li>
+
             </ul>
           </div>
         </nav>
